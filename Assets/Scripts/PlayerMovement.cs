@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D player;
     private Animator anim;
     private SpriteRenderer sprite;
+    private BoxCollider2D coll;
+    
+    [SerializeField] private LayerMask jumpableGround; // [SerializeField] allows private variables to be edited in Unity inspector
 
     private float dirX = 0f;
     // SerializeField allows private variables to be edited in Unity inspector
@@ -15,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpHeight = 14f;
     
     private enum State { idle, running, jumping, falling }
-    private State state = State.idle;
+    // private State state = State.idle;
 
     // Start is called before the first frame update
     private void Start()
@@ -23,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         player = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        coll = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -33,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         player.velocity = new Vector2(dirX * moveSpeed, player.velocity.y);
 
         // jump with button down
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isGrounded())
         {
             player.velocity = new Vector2(player.velocity.x, jumpHeight);
         }
@@ -81,5 +85,19 @@ public class PlayerMovement : MonoBehaviour
         }
 
         anim.SetInteger("state", (int)state);
+    }
+
+    // method to define if the player is grounded
+    private bool isGrounded()
+    {
+        return Physics2D.BoxCast(
+            coll.bounds.center, // center of collider
+            coll.bounds.size, // size of collider
+            0f, // angle
+            Vector2.down, // direction
+            .1f, // distance
+            jumpableGround
+        );
+
     }
 }
