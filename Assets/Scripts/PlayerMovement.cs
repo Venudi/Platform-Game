@@ -12,7 +12,8 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] private LayerMask jumpableGround; // [SerializeField] allows private variables to be edited in Unity inspector
 
-    private float dirX = 0f;
+    private float dirX;
+
     // SerializeField allows private variables to be edited in Unity inspector
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpHeight = 14f;
@@ -56,11 +57,13 @@ public class PlayerMovement : MonoBehaviour
         if (dirX > 0f)
         {
             state = State.running;
+            sprite.flipX = false;
         }
         // moving left
         else if (dirX < 0f)
         {
             state = State.running;
+            sprite.flipX = true;
         }
         // not moving
         else
@@ -77,11 +80,6 @@ public class PlayerMovement : MonoBehaviour
         else if (player.velocity.y < -0.1f)
         {
             state = State.falling;
-        }
-        // not jumping or falling
-        else
-        {
-            state = State.idle;
         }
 
         anim.SetInteger("state", (int)state);
