@@ -190,6 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 139648739}
   - component: {fileID: 139648740}
+  - component: {fileID: 139648741}
   m_Layer: 0
   m_Name: Saw
   m_TagString: Untagged
@@ -264,6 +265,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &139648741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139648738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53d7aa6322cf2854aa0c9e9da34f6ab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 831232782}
+  - {fileID: 1522602652}
+  speed: 2
 --- !u!1 &164658348
 GameObject:
   m_ObjectHideFlags: 0
