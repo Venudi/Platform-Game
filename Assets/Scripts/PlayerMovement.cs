@@ -19,7 +19,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpHeight = 14f;
     
     private enum State { idle, running, jumping, falling }
-    // private State state = State.idle;
+
+    [SerializeField] private AudioSource jumpSound;
 
     // Start is called before the first frame update
     private void Start()
@@ -40,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         // jump with button down
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
+            jumpSound.Play();
             player.velocity = new Vector2(player.velocity.x, jumpHeight);
         }
 
