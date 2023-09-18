@@ -1662,8 +1662,8 @@ GameObject:
   - component: {fileID: 1453074289}
   - component: {fileID: 1453074288}
   m_Layer: 0
-  m_Name: Idle
-  m_TagString: Untagged
+  m_Name: Spikes
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1897,6 +1897,7 @@ GameObject:
   - component: {fileID: 1892532586}
   - component: {fileID: 1892532587}
   - component: {fileID: 1892532588}
+  - component: {fileID: 1892532589}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2094,6 +2095,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strawberriesText: {fileID: 828683045}
+--- !u!114 &1892532589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892532580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59cbd9ebf70d85e4e9a97a2f812eab03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1951137077
 GameObject:
   m_ObjectHideFlags: 0
