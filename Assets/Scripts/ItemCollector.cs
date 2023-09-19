@@ -18,7 +18,7 @@ public class ItemCollector : MonoBehaviour
             collectionSound.Play();
             Destroy(collision.gameObject);
             strawberries++;
-            strawberriesText.text = "Strawberries: " + strawberries;
+            strawberriesText.text = ": " + strawberries;
         }
     }
 }
