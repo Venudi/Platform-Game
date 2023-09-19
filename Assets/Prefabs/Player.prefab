@@ -181,7 +181,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   moveSpeed: 7
-  jumpHeight: 14
+  jumpHeight: 12
   jumpSound: {fileID: 2592153269038377958}
 --- !u!95 &942856158190470675
 Animator:
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strawberriesText: {fileID: 0}
-  collectionSound: {fileID: 5565867804502230109}
+  collectionSound: {fileID: 76271421478863464}
 --- !u!114 &5087516108787970348
 MonoBehaviour:
   m_ObjectHideFlags: 0
