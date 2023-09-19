@@ -9,11 +9,13 @@ public class ItemCollector : MonoBehaviour
     private int strawberries = 0;
 
     [SerializeField] private Text strawberriesText; // [SerializeField] allows private variables to be edited in Unity inspector
+    [SerializeField] private AudioSource collectionSound;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Strawberry"))
         {
+            collectionSound.Play();
             Destroy(collision.gameObject);
             strawberries++;
             strawberriesText.text = "Strawberries: " + strawberries;
