@@ -20,7 +20,7 @@ public class Finish : MonoBehaviour
         {
             finishSound.Play();
             LevelComplete = true;
-            Invoke("CompleteLevel", 2f); // Invoke() calls a function after a delay (in seconds)
+            Invoke("CompleteLevel", 1.5f); // Invoke() calls a function after a delay (in seconds)
         }
     }
 

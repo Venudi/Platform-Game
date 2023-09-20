@@ -1283,6 +1283,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5316892214569762853, guid: 2a955b5d64004584bb6a84de9d2ccbe8, type: 3}
+      propertyPath: m_TagString
+      value: Strawberry
+      objectReference: {fileID: 0}
     - target: {fileID: 6753057463473725463, guid: 2a955b5d64004584bb6a84de9d2ccbe8, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1292,6 +1296,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a955b5d64004584bb6a84de9d2ccbe8, type: 3}
+--- !u!114 &1196574343 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5347078050812715653, guid: 2a955b5d64004584bb6a84de9d2ccbe8, type: 3}
+  m_PrefabInstance: {fileID: 1196574342}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1196661264 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 409056627043475344, guid: f98976220528d7b43974e06a405b9349, type: 3}
@@ -62280,7 +62295,7 @@ PrefabInstance:
     - target: {fileID: 2591469180913594953, guid: b88208d3d8a598f4c90591f3984961d2, type: 3}
       propertyPath: strawberriesText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1196574343}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
