@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         player.velocity = new Vector2(dirX * moveSpeed, player.velocity.y);
 
         // jump with button down
-        if (Input.GetButtonDown("Jump") && isGrounded())
+        if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))&& isGrounded())
         {
             jumpSound.Play();
             player.velocity = new Vector2(player.velocity.x, jumpHeight);
