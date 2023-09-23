@@ -23,6 +23,8 @@ public class WaypointFollower : MonoBehaviour
             // if current waypoint is reached
             if (transform.position == currentWaypoint.transform.position)
             {
+                // flip
+                transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
                 // increase current waypoint index
                 currentWaypointIndex++;
                 // if current waypoint index is equal to waypoints length
