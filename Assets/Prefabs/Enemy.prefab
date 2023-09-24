@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1938079640752628578}
   - component: {fileID: 1986159812661817207}
   - component: {fileID: 2666255120089818646}
-  - component: {fileID: 6341764457959085004}
   - component: {fileID: 250100242411010871}
   - component: {fileID: 2316367976075166877}
+  - component: {fileID: 4266805968489634359}
   m_Layer: 6
   m_Name: Rhino
   m_TagString: Trap
@@ -109,22 +109,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6341764457959085004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55679538960365545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53d7aa6322cf2854aa0c9e9da34f6ab0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 609230514427954646}
-  - {fileID: 5317976392713368448}
-  speed: 3
 --- !u!61 &250100242411010871
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -215,6 +199,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8330784, y: 0.045394063}
   m_EdgeRadius: 0
+--- !u!114 &4266805968489634359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55679538960365545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4691413734bac445b10bcb115c8f15b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 609230514427954646}
+  - {fileID: 5317976392713368448}
+  speed: 2
 --- !u!1 &409278533073226532
 GameObject:
   m_ObjectHideFlags: 0

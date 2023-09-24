@@ -2,9 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerLife : MonoBehaviour
 {
+    // lives global variable
+    public static int lives = 5;
+
+    // get lives text
+    [SerializeField] private Text livesText;
+
     // rigid body 2d
     private Rigidbody2D rb;
     private Animator anim;
@@ -15,6 +22,7 @@ public class PlayerLife : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        livesText.text = "Lives: " + lives;
     }
 
     // oncollisionenter2d
@@ -29,16 +37,41 @@ public class PlayerLife : MonoBehaviour
     // die
     private void Die()
     {
+        // reduce lives
+        lives--;
+        // play death sound
         deathSound.Play();
         // set statice
         rb.bodyType = RigidbodyType2D.Static;
         // set trigger
         anim.SetTrigger("death");
+        // add small delay before changing text
+        Invoke("UpdateLivesText", 0.5f);
     }
     
     // restart level
     private void RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // go to game over screen if lives are 0
+        if (lives <= 0)
+        {
+            EndGame();
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+    // end game
+    private void EndGame()
+    {
+        SceneManager.LoadScene("End Screen");
+    }
+
+    // update lives text
+    private void UpdateLivesText()
+    {
+        livesText.text = "Lives: " + lives;
     }
 }

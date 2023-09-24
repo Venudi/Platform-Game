@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RhinoWaypointFollower : MonoBehaviour
-{
+public class WaypointFollower : MonoBehaviour
+{ 
     // get waypoints
     [SerializeField] private GameObject[] waypoints;
     // current waypoint index
@@ -23,6 +23,8 @@ public class RhinoWaypointFollower : MonoBehaviour
             // if current waypoint is reached
             if (transform.position == currentWaypoint.transform.position)
             {
+                // flip
+                transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
                 // increase current waypoint index
                 currentWaypointIndex++;
                 // if current waypoint index is equal to waypoints length
