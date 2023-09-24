@@ -17,23 +17,12 @@ public class EndMenu : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Level 0");
     }
 
-    private void Update()
+    public void BackToMenu()
     {
-        // // if game object restartButton is pressed
-        // if (restartButton.isPressed)
-        // {
-        //     // restart game
-        //     RestartGame();
-        // }
-        // // if game object quitButton is pressed
-        // if (quitButton.isPressed)
-        // {
-        //     // quit game
-        //     QuitGame();
-        // }
+        SceneManager.LoadScene("Start Screen");
     }
 
 }
