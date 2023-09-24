@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerLife : MonoBehaviour
 {
-    // player lives
-    public int lives = 5;
+    // lives global variable
+    public static int lives = 5;
+
+    // get lives text
     [SerializeField] private Text livesText;
 
     // rigid body 2d
@@ -19,6 +22,7 @@ public class PlayerLife : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        livesText.text = "Lives: " + lives;
     }
 
     // oncollisionenter2d
@@ -41,7 +45,8 @@ public class PlayerLife : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Static;
         // set trigger
         anim.SetTrigger("death");
-        livesText.text = ": " + lives;
+        // add small delay before changing text
+        Invoke("UpdateLivesText", 0.5f);
     }
     
     // restart level
@@ -62,5 +67,11 @@ public class PlayerLife : MonoBehaviour
     private void EndGame()
     {
         SceneManager.LoadScene("End Screen");
+    }
+
+    // update lives text
+    private void UpdateLivesText()
+    {
+        livesText.text = "Lives: " + lives;
     }
 }
