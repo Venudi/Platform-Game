@@ -8,7 +8,10 @@ public class ItemCollector : MonoBehaviour
     // strawberry count
     private int strawberries = 0;
 
-    [SerializeField] private Text strawberriesText; // [SerializeField] allows private variables to be edited in Unity inspector
+    // global strawberry count
+    public static int globalStrawberries = 0;
+
+    [SerializeField] private Text strawberriesText;
     [SerializeField] private AudioSource collectionSound;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -18,6 +21,7 @@ public class ItemCollector : MonoBehaviour
             collectionSound.Play();
             Destroy(collision.gameObject);
             strawberries++;
+            globalStrawberries++;
             strawberriesText.text = ": " + strawberries;
         }
     }

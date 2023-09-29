@@ -10,6 +10,9 @@ public class PlayerLife : MonoBehaviour
     // lives global variable
     public static int lives = 5;
 
+    // strawberries global variable
+    public static int strawberriesGlobal = 0;
+
     // rigid body 2d
     private Rigidbody2D rb;
     private Animator anim;
@@ -76,6 +79,7 @@ public class PlayerLife : MonoBehaviour
     // end game
     private void EndGame()
     {
+        lives = 5;
         SceneManager.LoadScene("End Screen");
     }
 
