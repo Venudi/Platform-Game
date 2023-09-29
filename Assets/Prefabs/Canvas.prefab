@@ -25,15 +25,15 @@ Transform:
   m_GameObject: {fileID: 421520068459794248}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -378.08887, y: 200.00119, z: -0.48909926}
+  m_LocalPosition: {x: -235, y: 196, z: -0.48909926}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6116755877994406740}
-  - {fileID: 3267499749405404946}
-  - {fileID: 3925420345233634469}
-  - {fileID: 2008221086923296612}
   - {fileID: 7193656736020454055}
+  - {fileID: 2008221086923296612}
+  - {fileID: 3925420345233634469}
+  - {fileID: 3267499749405404946}
+  - {fileID: 6116755877994406740}
   m_Father: {fileID: 1151947919161883093}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1136673283089857831
@@ -48,8 +48,8 @@ GameObject:
   - component: {fileID: 1795446766391735597}
   - component: {fileID: 1108136011090708591}
   m_Layer: 5
-  m_Name: Heart 4
-  m_TagString: Untagged
+  m_Name: Heart 1
+  m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,85 +111,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &1775358173449403194
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2158529906623963463}
-  - component: {fileID: 249776296787659016}
-  - component: {fileID: 5406294665729916580}
-  m_Layer: 5
-  m_Name: Lives Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2158529906623963463
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775358173449403194}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1151947919161883093}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120.9, y: -99}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &249776296787659016
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775358173449403194}
-  m_CullTransparentMesh: 1
---- !u!114 &5406294665729916580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775358173449403194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 1fd24f124bbdb4345bd0714dc2e54ae7, type: 3}
-    m_FontSize: 20
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Lives: 5'
 --- !u!1 &4572078834541410269
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,8 +123,8 @@ GameObject:
   - component: {fileID: 8025713285035954011}
   - component: {fileID: 101597956830091725}
   m_Layer: 5
-  m_Name: Heart 3
-  m_TagString: Untagged
+  m_Name: Heart 2
+  m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -299,7 +220,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -503, y: 222}
+  m_AnchoredPosition: {x: -359.91113, y: 217.99881}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4789646624912614825
@@ -431,8 +352,8 @@ GameObject:
   - component: {fileID: 1320458325255065428}
   - component: {fileID: 149259069927946706}
   m_Layer: 5
-  m_Name: Heart 0
-  m_TagString: Untagged
+  m_Name: Heart 5
+  m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -528,7 +449,6 @@ RectTransform:
   - {fileID: 8994254753195649937}
   - {fileID: 5857099498127112331}
   - {fileID: 560178855231558404}
-  - {fileID: 2158529906623963463}
   - {fileID: 7660210725141125766}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -612,8 +532,8 @@ GameObject:
   - component: {fileID: 3092774254072665204}
   - component: {fileID: 4130118167281394628}
   m_Layer: 5
-  m_Name: Heart 2
-  m_TagString: Untagged
+  m_Name: Heart 3
+  m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -718,8 +638,8 @@ GameObject:
   - component: {fileID: 3942334040038487290}
   - component: {fileID: 7264124664512479543}
   m_Layer: 5
-  m_Name: Heart 1
-  m_TagString: Untagged
+  m_Name: Heart 4
+  m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

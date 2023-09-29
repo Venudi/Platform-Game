@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Linq;
 
 public class PlayerLife : MonoBehaviour
 {
     // lives global variable
     public static int lives = 5;
-
-    // get lives text
-    [SerializeField] private Text livesText;
 
     // rigid body 2d
     private Rigidbody2D rb;
@@ -20,9 +18,21 @@ public class PlayerLife : MonoBehaviour
 
     private void Start()
     {
+        // get objects with tag "Heart" in order of appearance
+        GameObject[] hearts = GameObject.FindGameObjectsWithTag("Heart").OrderBy(go => go.name).ToArray();
+
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        livesText.text = "Lives: " + lives;
+        // disable hearts
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            hearts[i].SetActive(false);
+        }
+        // enable hearts
+        for (int i = 0; i < lives; i++)
+        {
+            hearts[i].SetActive(true);
+        }
     }
 
     // oncollisionenter2d
@@ -46,7 +56,7 @@ public class PlayerLife : MonoBehaviour
         // set trigger
         anim.SetTrigger("death");
         // add small delay before changing text
-        Invoke("UpdateLivesText", 0.5f);
+        Invoke("UpdateLives", 0.5f);
     }
     
     // restart level
@@ -70,8 +80,18 @@ public class PlayerLife : MonoBehaviour
     }
 
     // update lives text
-    private void UpdateLivesText()
+    private void UpdateLives()
     {
-        livesText.text = "Lives: " + lives;
+        GameObject[] hearts = GameObject.FindGameObjectsWithTag("Heart");
+        // disable hearts
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            hearts[i].SetActive(false);
+        }
+        // enable hearts
+        for (int i = 0; i < lives; i++)
+        {
+            hearts[i].SetActive(true);
+        }
     }
 }
