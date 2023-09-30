@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 501263266}
   - component: {fileID: 501263267}
   m_Layer: 0
-  m_Name: Trophy 2
+  m_Name: Trophy 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1138,7 +1138,7 @@ GameObject:
   - component: {fileID: 1184177481}
   - component: {fileID: 1184177482}
   m_Layer: 0
-  m_Name: Trophy 0
+  m_Name: Trophy 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

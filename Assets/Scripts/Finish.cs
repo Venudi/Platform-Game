@@ -26,7 +26,6 @@ public class Finish : MonoBehaviour
 
     private void CompleteLevel()
     {
-        // Debug.Log("Level Complete!");
         // add strawberries to global strawberries
         PlayerLife.strawberriesGlobal += ItemCollector.globalStrawberries;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

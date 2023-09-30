@@ -72,6 +72,7 @@ public class PlayerLife : MonoBehaviour
         }
         else
         {
+            ItemCollector.globalStrawberries = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
